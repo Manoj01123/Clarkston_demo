@@ -180,7 +180,7 @@ for sheet in questionnaire_data:
                     end_time = time.time()
                     now = datetime.datetime.now()
                     submit_time = now.strftime("%H:%M:%S")
-                    fill_duration = round((end_time - st.session_state.time)/60, 3)
+                    fill_duration = round((end_time - st.session_state.time), 3)
                     st.session_state.time = 0
                     
                     st.write("You spent " + str(fill_duration) + " mints filling this sheet")
